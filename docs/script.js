@@ -36,6 +36,12 @@ const endSound = new Audio('docs/end.mp3');
 countdownSound.load();
 endSound.load();
 
+// Ensure audio playback is tied to user interaction
+startButton.addEventListener('click', () => {
+    countdownSound.play(); // Preload and allow playback on user interaction
+    endSound.play(); // Preload and allow playback on user interaction
+});
+
 function updateTimerDisplay(seconds) {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
