@@ -28,6 +28,10 @@ stopButton.textContent = 'Stop';
 stopButton.style.display = 'none'; // Initially hidden
 startButton.insertAdjacentElement('afterend', stopButton);
 
+// Add audio files for countdown and end sounds
+const countdownSound = new Audio('beep.mp3');
+const endSound = new Audio('end.mp3');
+
 function updateTimerDisplay(seconds) {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
@@ -91,8 +95,16 @@ function startTimer(resumeTime = null) {
         timeLeft--;
         updateTimerDisplay(timeLeft);
 
-        if (timeLeft <= 0) {
+        // Play countdown sound at 3, 2, and 1 seconds left
+        if (timeLeft === 3 || timeLeft === 2 || timeLeft === 1) {
+            countdownSound.play();
+        }
+
+        // Play end sound when the timer reaches 0
+        if (timeLeft === 0) {
             clearInterval(timerInterval);
+            endSound.play();
+
             if (isActive) {
                 isActive = false;
             } else {
