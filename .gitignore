@@ -1,0 +1,35 @@
+# Ignore target directory and build artifacts
+target/
+
+# Ignore dependency files
+debug/deps/
+
+# Ignore incremental compilation files
+debug/incremental/
+
+# Ignore examples directory
+debug/examples/
+
+# Ignore Cargo.lock if the project is a library
+Cargo.lock
+
+# Ignore backup files
+*.bak
+*.tmp
+
+# Ignore editor-specific files
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+<<<<<<< HEAD
+*.log
+=======
+*.log
+>>>>>>> refs/remotes/origin/main
