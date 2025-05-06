@@ -29,8 +29,8 @@ stopButton.style.display = 'none'; // Initially hidden
 startButton.insertAdjacentElement('afterend', stopButton);
 
 // Add audio files for countdown and end sounds
-const countdownSound = new Audio('./beep.wav');
-const endSound = new Audio('./end.wav');
+const countdownSound = new Audio('./beep.mp3');
+const endSound = new Audio('./end.mp3');
 
 // Preload the audio files by loading them
 countdownSound.load();
