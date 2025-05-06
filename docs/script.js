@@ -29,8 +29,8 @@ stopButton.style.display = 'none'; // Initially hidden
 startButton.insertAdjacentElement('afterend', stopButton);
 
 // Add audio files for countdown and end sounds
-const countdownSound = new Audio('docs/beep.mp3');
-const endSound = new Audio('docs/end.mp3');
+const countdownSound = new Audio('./beep.mp3');
+const endSound = new Audio('./end.mp3');
 
 function updateTimerDisplay(seconds) {
     const minutes = Math.floor(seconds / 60);
