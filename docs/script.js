@@ -32,6 +32,10 @@ startButton.insertAdjacentElement('afterend', stopButton);
 const countdownSound = new Audio('./beep.wav');
 const endSound = new Audio('./end.wav');
 
+// Preload the audio files by loading them
+countdownSound.load();
+endSound.load();
+
 function updateTimerDisplay(seconds) {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
