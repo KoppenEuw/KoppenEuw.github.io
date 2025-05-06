@@ -4,16 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter App</title>
+    <title>HIIT Workout Timer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="counter-container">
-        <h1>Counter: <span id="counter">0</span></h1>
-        <button id="increment">+</button>
-        <button id="decrement">-</button>
-        <button id="reset">Reset</button>
+    <div class="timer-container">
+        <div id="status" class="status">Rest</div>
+        <div id="timer" class="timer">00:40</div>
+        <div id="round" class="round">ROUND 1/8</div>
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="restart">Restart</button>
+        </div>
+        <div class="settings">
+            <div class="setting">
+                <label>Active Duration</label>
+                <button id="active-minus">-</button>
+                <span id="active-duration">00:40</span>
+                <button id="active-plus">+</button>
+            </div>
+            <div class="setting">
+                <label>Break Duration</label>
+                <button id="break-minus">-</button>
+                <span id="break-duration">00:20</span>
+                <button id="break-plus">+</button>
+            </div>
+            <div class="setting">
+                <label>Rounds</label>
+                <button id="rounds-minus">-</button>
+                <span id="rounds">8</span>
+                <button id="rounds-plus">+</button>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
